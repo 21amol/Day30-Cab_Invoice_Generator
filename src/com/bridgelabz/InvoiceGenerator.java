@@ -55,8 +55,8 @@ public class InvoiceGenerator {
     public InvoiceSummary getInvoice(int userId) {
         Map<Integer, Rides[]> map = new HashMap<>();
 
-        Rides[] rides1 = {new Rides(5.0, 5),
-                new Rides(0.1, 1)
+        Rides[] rides1 = {new Rides(5, 5),
+                new Rides(1, 1)
         };
         Rides[] rides2 = {new Rides(7.0, 10),
                 new Rides(6, 1)
@@ -73,8 +73,8 @@ public class InvoiceGenerator {
             if (userId == entry.getKey()) {
                 System.out.println(entry.getKey());
                 Rides[] ridesArray = entry.getValue();
-                System.out.println(ridesArray);
-                //         return invoiceSummary(ridesArray);
+            //    System.out.println(ridesArray);
+                return invoiceSummary(ridesArray);
             }
         }
         return null;
